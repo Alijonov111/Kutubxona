@@ -1,0 +1,11 @@
+<h2>Talabalar ro'yhati</h2>
+<hr>
+<form>
+    <label>Search</label>
+    <input type="text" name="search" value="{{request.Get.search}}">
+    <button type="submit">Seaerch</button>
+</form>
+<hr>
+{% for talaba in talabalar%}
+    <h3> {{ talaba.ism }} [{{talaba.kurs}}-kurs] | <a href="/delete/talaba/{{ talaba.id}}">🗑 </a></h3>
+{% endfor %}
